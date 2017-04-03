@@ -1,0 +1,11 @@
+#!/bin/bash -l 
+#SBATCH -p debug
+#SBATCH -N 1
+#SBATCH -t 00:01:00 
+#SBATCH -J My_267_job 
+#SBATCH -o MyFinalOutputFile.%j.out
+#SBATCH -e MyFinalErrorFile.%j.err
+
+
+srun -n 1 -N 1 ./benchmark-final
+
